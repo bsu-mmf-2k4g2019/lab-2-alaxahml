@@ -8,7 +8,7 @@ QT       += core gui opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Lab_2
+TARGET = GL_example
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,13 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-    main.cpp \
-    glwidget.cpp
+        main.cpp \
+        glwindow.cpp
 
 HEADERS += \
-    glwidget.h
+        glwindow.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc
